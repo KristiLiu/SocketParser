@@ -5,7 +5,7 @@ import pprint
 def consumer():
     ctxt= zmq.Context()
     consumer_receiver_sock= ctxt.socket(zmq.PULL)
-    consumer_receiver_sock.connect("tcp://192.168.1.124:43000")
+    consumer_receiver_sock.connect("")
     print("connecting to port")
     while True:
         JSonString =consumer_receiver_sock.recv_json()
