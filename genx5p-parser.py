@@ -5,7 +5,7 @@ import time
 ctxt = zmq.Context().instance()
 in_sock = ctxt.socket(zmq.PULL)
 out_sock = ctxt.socket(zmq.PUSH)
-out_channel = 'genx5p_parser'
+out_channel = 'name'
 
 
 def run(in_addr, out_addr):
@@ -15,12 +15,9 @@ def run(in_addr, out_addr):
     out_sock.bind(out_addr)
     print("Parser begins listening...")
 
-
     try:
-        while True:
 
             #logic
-
     except KeyboardInterrupt as e:
         pass
 
